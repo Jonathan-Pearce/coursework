@@ -1,0 +1,70 @@
+Non terminals:
+
+S -> NP-1Sg VP-1Sg | NP-2Sg VP-2Sg | NP-3Sg VP-3Sg | NP-1Pl VP-1Pl | NP-2Pl VP-2Pl | NP-3Pl VP-3Pl | NP-Sg VP-3Sg | NP-Pl VP-3Pl | NP | PN VP-3Sg | PN
+
+NP-1Sg -> PR-1Sg
+NP-2Sg -> PR-2Sg
+NP-3Sg -> PR-3Sg
+NP-1Pl -> PR-1Pl
+NP-2Pl -> PR-2Pl
+NP-3Pl -> PR-3Pl
+
+VP-1Sg -> V-1Sg NP | PR-Do V-1Sg
+VP-2Sg -> V-2Sg NP | PR-Do V-2Sg
+VP-3Sg -> V-3Sg NP | PR-Do V-3Sg
+VP-1Pl -> V-1Pl NP | PR-Do V-1Pl
+VP-2Pl -> V-2Pl NP | PR-Do V-2Pl
+VP-3Pl -> V-3Pl NP | PR-Do V-3Pl
+
+NP -> DT-Masc NP-Masc | DT-Fem NP-Fem | DT-Pl NP-Pl
+NP-Sg -> DT-Masc NP-Masc | DT-Fem NP-Fem
+NP-Masc -> N-SgMasc | N-SgMasc A-FollowSgMasc | A-PrecedeSgMasc N-SgMasc | N-SgMasc A-OrSgMasc | A-OrSgMasc N-SgMasc
+NP-Fem -> N-SgFem | N-SgFem A-FollowSgFem | A-PrecedeSgFem N-SgFem | N-SgFem A-OrSgFem | A-OrSgFem N-SgFem
+NP-Pl -> N-PlMasc | N-PlFem | N-PlMasc A-FollowPlMasc | A-PrecedePlMasc N-PlMasc | N-PlMasc A-OrPlMasc | A-OrPlMasc N-PlMasc | N-PlFem A-FollowPlFem | A-PrecedePlFem N-PlFem | N-PlFem A-OrPlFem | A-OrPlFem N-PlFem
+
+
+Terminals
+----------------------------------------------------
+#2 
+PR-1Sg -> je
+PR-2Sg -> tu
+PR-3Sg -> il | elle | on
+PR-1Pl -> nous
+PR-2Pl -> vous
+PR-3Pl -> ils | elles
+
+V-1Sg -> mange   | regarde   | cherche   | parle 
+V-2Sg -> manges  | regardes  | cherches  | parles
+V-3Sg -> mange   | regarde   | cherche   | parle
+V-1Pl -> mangons | regardons | cherchons | parlons
+V-2Pl -> mangez  | regardez  | cherchez  | parlez
+V-3Pl -> mangent | regardent | cherchent | parlent
+----------------------------------------------------
+#3
+DT-Masc -> le
+DT-Fem -> la
+DT-Pl -> les
+
+N-SgMasc -> chat | papier | poisson
+N-SgFem  -> television | musique | victoire
+N-PlMasc -> chats | papiers  | poissons
+N-PlFem -> television | musiques | victoires
+
+PN -> Jonathan | Montreal | Fortnite
+----------------------------------------------------
+#4
+PR-Do -> me | te | le | la | nous | vous | les
+----------------------------------------------------
+#5
+A-FollowSgMasc   -> noir   | heureux   | bleu
+A-FollowSgFem    -> noire  | heureuse  | bleue
+A-FollowPlMasc -> noirs  | heureux   | bleus
+A-FollowPlFem  -> noires | heureuses | bleues
+A-PrecedeSgMasc   -> beau   | joli   | gros
+A-PrecedeSgFem    -> belle  | jolie  | grosse
+A-PrecedePlMasc -> beaux  | jolis  | gros
+A-PrecedePlFem  -> belles | jolies | grosses
+A-OrSgMasc   -> dernier   | pauvre  | seul
+A-OrSgFem    -> dernière  | pauvre  | seule
+A-OrPlMasc -> derniers  | pauvres | seuls
+A-OrPlFem  -> dernières | pauvres | seules
